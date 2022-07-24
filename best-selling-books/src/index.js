@@ -1,15 +1,36 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
-function Greeting() {
+function BookList() {
   return (
-    <React.Fragment>
-      <Button variant='primary'>Button as link</Button>
-      <Button variant='success'>Button as link</Button>
-    </React.Fragment>
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
 }
 
-ReactDom.render(<Greeting />, document.getElementById('root'));
+const Book = () => {
+  return (
+    <article className='book'>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
+
+const Image = () => (
+  <img src='https://images-fe.ssl-images-amazon.com/images/I/71FXfPs-iyL._AC_UL604_SR604,400_.jpg' />
+);
+
+const Title = () => <h1 className='display-5'>Where the Crawdads Sing</h1>;
+const Author = () => <h4>Delia Owens</h4>;
+
+ReactDom.render(<BookList />, document.getElementById('root'));
