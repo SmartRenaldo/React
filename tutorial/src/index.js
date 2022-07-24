@@ -3,9 +3,11 @@ import ReactDom from 'react-dom';
 
 function Greeting() {
   return (
-    <div>
+    <React.Fragment>
+      <h2>JSX Rules</h2>
       <article>This is Renaldo and this is my first component!</article>
-    </div>
+      <input type='text' />
+    </React.Fragment>
   );
 }
 
