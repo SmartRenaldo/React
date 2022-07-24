@@ -1,8 +1,21 @@
-import ReactDom from 'react-dom'
+import React from 'react';
+import ReactDom from 'react-dom';
 
-function Greeting()
-{
-  return <article>This is Renaldo and this is my first component!</article>;
+function Greeting() {
+  return (
+    <div>
+      <article>This is Renaldo and this is my first component!</article>
+    </div>
+  );
 }
 
-ReactDom.render(<Greeting/>, document.getElementById('root'))
+// messy way, not recommended
+// const Greeting = () => {
+//   return React.createElement(
+//     'div',
+//     {},
+//     React.createElement('h1', {}, 'hello Renaldo')
+//   );
+// };
+
+ReactDom.render(<Greeting />, document.getElementById('root'));
