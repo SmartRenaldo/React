@@ -16,12 +16,15 @@ function BookList() {
   );
 }
 
+const author = 'Delia Owens';
 const Book = () => {
+  const title = 'Where the Crawdads Sing';
+
   return (
     <article className='book'>
       <img src='https://images-fe.ssl-images-amazon.com/images/I/71FXfPs-iyL._AC_UL604_SR604,400_.jpg' />
-      <h1 className='display-5'>Where the Crawdads Sing</h1>
-      <h4>Delia Owens</h4>
+      <h1 className='display-5'>{title}</h1>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   );
 };
