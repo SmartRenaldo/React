@@ -22,7 +22,7 @@ const Book = ({ img, author, title }) => {
         console.log(title);
       }}
     >
-      <img src={img} />
+      <img src={img} alt='' />
       <h1 className='display-6 text-center'>{title}</h1>
       <h4 className='text-center'>{author}</h4>
       <div class='d-flex justify-content-evenly'>
