@@ -37,5 +37,7 @@ body {
 }
 
 .book h4 {
+  color: #617d98;
+  font-size: 2rem;
   margin-top: 0.5rem;
 }
