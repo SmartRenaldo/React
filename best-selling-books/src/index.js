@@ -3,43 +3,38 @@ import ReactDom from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
-const firstBook = {
-  img: 'https://images-fe.ssl-images-amazon.com/images/I/71FXfPs-iyL._AC_UL604_SR604,400_.jpg',
-  title: 'Where the Crawdads Sing',
-  author: 'Delia Owens',
-};
-
-const secondBook = {
-  img: 'https://images-fe.ssl-images-amazon.com/images/I/71luEOJVzJL._AC_UL604_SR604,400_.jpg',
-  title: 'The Lord Of The Rings [Illustrated Edition]',
-  author: 'J r r Tolkien',
-};
+const books = [
+  {
+    id: 1,
+    img: 'https://images-fe.ssl-images-amazon.com/images/I/71FXfPs-iyL._AC_UL604_SR604,400_.jpg',
+    title: 'Where the Crawdads Sing',
+    author: 'Delia Owens',
+  },
+  {
+    id: 2,
+    img: 'https://images-fe.ssl-images-amazon.com/images/I/71luEOJVzJL._AC_UL604_SR604,400_.jpg',
+    title: 'The Lord Of The Rings [Illustrated Edition]',
+    author: 'J r r Tolkien',
+  },
+  {
+    id: 3,
+    img: 'https://images-fe.ssl-images-amazon.com/images/I/91bYsX41DVL._AC_UL604_SR604,400_.jpg',
+    title: 'Atomic Habits: the life-changing million-copy',
+    author: 'James Clear',
+  },
+];
 
 function BookList() {
   return (
     <section className='booklist'>
-      <Book
-        img={firstBook.img}
-        title={firstBook.title}
-        author={firstBook.author}
-      >
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
-          libero illum, aut, eius odio magni, adipisci sed ducimus quaerat ab
-          beatae nostrum cum laboriosam. Ipsum cupiditate explicabo hic placeat
-          quod.
-        </p>
-      </Book>
-      <Book
-        img={secondBook.img}
-        title={secondBook.title}
-        author={secondBook.author}
-      />
+      {books.map((book, index) => {
+        return <Book key={book.id} {...book}></Book>;
+      })}
     </section>
   );
 }
 
-const Book = ({ img, author, title, children }) => {
+const Book = ({ img, author, title }) => {
   // const { img, author, title } = props;
 
   return (
@@ -47,7 +42,6 @@ const Book = ({ img, author, title, children }) => {
       <img src={img} />
       <h1 className='display-6'>{title}</h1>
       <h4>{author}</h4>
-      {children}
     </article>
   );
 };
