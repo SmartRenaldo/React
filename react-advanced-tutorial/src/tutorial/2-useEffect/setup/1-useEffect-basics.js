@@ -7,7 +7,9 @@ const UseEffectBasics = () => {
 
   useEffect(() => {
     console.log('call useEffect');
-    document.title = `New Message(${value})`;
+    if (value > 1) {
+      document.title = `New Message(${value})`;
+    }
   });
   console.log('render component');
   return (
