@@ -3,6 +3,10 @@ import React, { useState, useEffect } from 'react';
 // cleanup function
 // second parameter
 const UseEffectBasics = () => {
+  useEffect(() => {
+    console.log('call useEffect');
+  });
+  console.log('render component');
   return <h2>useEffect Basics</h2>;
 };
 
