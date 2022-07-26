@@ -8,6 +8,7 @@ const UseEffectFetchData = () => {
   const getUsers = async () => {
     const response = await fetch(url);
     const users = await response.json();
+    setUsers(users);
     console.log(users);
   };
 
@@ -18,6 +19,20 @@ const UseEffectFetchData = () => {
   return (
     <>
       <h3 className='display-4'>github users</h3>
+      <ul className='users'>
+        {users.map((user) => {
+          const { id, login, avatar_url, html_url } = user;
+          return (
+            <li key={id} className='btn btn-info'>
+              <img src={avatar_url} alt={login} />
+              <div>
+                <h4>{login}</h4>
+                <a href={html_url}>profile</a>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </>
   );
 };
