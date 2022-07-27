@@ -30,6 +30,12 @@ const ShortCircuit = () => {
       <div className='display-6 my-4'>
         {text2 || <p className='text-danger'>nora wing</p>}
       </div>
+      <div className='display-6 my-4'>
+        {text && <p className='text-success'>dora wax</p>}
+      </div>
+      <div className='display-6 my-4'>
+        {text2 && <p className='text-success'>dora wax</p>}
+      </div>
     </>
   );
 };
