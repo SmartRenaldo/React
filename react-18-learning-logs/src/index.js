@@ -6,6 +6,16 @@ const App = (
     <div className='item'>
       <div className='date'>
         <div className='month'>February</div>
+        <div className='day'>22</div>
+      </div>
+      <div className='content'>
+        <div className='title'>Learn React</div>
+        <div className='time'>40 min</div>
+      </div>
+    </div>
+    <div className='item'>
+      <div className='date'>
+        <div className='month'>February</div>
         <div className='day'>25</div>
       </div>
       <div className='content'>
@@ -31,16 +41,6 @@ const App = (
       <div className='content'>
         <div className='title'>Learn Vue</div>
         <div className='time'>30 min</div>
-      </div>
-    </div>
-    <div className='item'>
-      <div className='date'>
-        <div className='month'>February</div>
-        <div className='day'>22</div>
-      </div>
-      <div className='content'>
-        <div className='title'>Learn React</div>
-        <div className='time'>40 min</div>
       </div>
     </div>
   </div>
