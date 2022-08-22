@@ -1,0 +1,22 @@
+.date {
+  width: 90px;
+  background-color: #464466;
+  border-radius: 0.8rem;
+  font-weight: bolder;
+  text-align: center;
+  overflow: hidden;
+}
+
+.month {
+  height: 2rem;
+  line-height: 2rem;
+  background-color: rgb(100, 13, 100);
+}
+
+.day {
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  color: black;
+  background-color: white;
+}

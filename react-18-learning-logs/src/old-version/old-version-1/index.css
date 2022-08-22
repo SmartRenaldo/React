@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: #cccccc;
+}
+
+.logs {
+  width: 800px;
+  margin: 60px auto;
+  background-color: rgb(190, 144, 186);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+}
+
+.item {
+  display: flex;
+  background-color: rgb(147, 28, 160);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 0.8rem 0;
+}
+
+.date {
+  width: 90px;
+  background-color: #464466;
+  border-radius: 0.8rem;
+  font-weight: bolder;
+  text-align: center;
+  overflow: hidden;
+}
+
+.month {
+  height: 2rem;
+  line-height: 2rem;
+  background-color: rgb(100, 13, 100);
+}
+
+.day {
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  color: black;
+  background-color: white;
+}
+
+.content {
+  flex: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.title {
+  font-size: 1.5rem;
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.time {
+  font-size: 1.2rem;
+}

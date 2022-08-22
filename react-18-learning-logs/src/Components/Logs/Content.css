@@ -1,0 +1,15 @@
+.content {
+  flex: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.title {
+  font-size: 1.5rem;
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.time {
+  font-size: 1.2rem;
+}
