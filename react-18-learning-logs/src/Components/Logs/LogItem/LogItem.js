@@ -1,6 +1,6 @@
 import React from 'react';
-import Content from './Content';
-import DateComp from './DateComp';
+import Content from '../Content/Content';
+import DateComp from '../DateCamp/DateComp';
 import './LogItem.css';
 
 const LogItem = () => {

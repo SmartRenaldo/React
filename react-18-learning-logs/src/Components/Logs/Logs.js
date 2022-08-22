@@ -1,4 +1,4 @@
-import LogItem from './LogItem';
+import LogItem from './LogItem/LogItem';
 import './Logs.css';
 
 const Logs = () => {
