@@ -4,5 +4,5 @@ function App() {
   return <div>Hello World!</div>;
 }
 
-const root = ReactDOM.createROOT(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
