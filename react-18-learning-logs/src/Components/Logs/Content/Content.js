@@ -1,11 +1,11 @@
 import React from 'react';
 import './Content.css';
 
-const Content = () => {
+const Content = (props) => {
   return (
     <div className='content'>
-      <div className='title'>Learn React</div>
-      <div className='time'>40 min</div>
+      <div className='title'>{props.title}</div>
+      <div className='time'>{props.time}</div>
     </div>
   );
 };

@@ -1,11 +1,14 @@
 import React from 'react';
 import './DateComp.css';
 
-const DateComp = () => {
+const DateComp = (props) => {
+  const month = props.date.toLocaleString('en-AU', { month: 'long' });
+  const date = props.date.getDate();
+
   return (
     <div className='date'>
-      <div className='month'>February</div>
-      <div className='day'>22</div>
+      <div className='month'>{month}</div>
+      <div className='day'>{date}</div>
     </div>
   );
 };

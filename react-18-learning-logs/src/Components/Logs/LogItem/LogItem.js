@@ -3,11 +3,11 @@ import Content from '../Content/Content';
 import DateComp from '../DateCamp/DateComp';
 import './LogItem.css';
 
-const LogItem = () => {
+const LogItem = (props) => {
   return (
     <div className='item'>
-      <DateComp />
-      <Content />
+      <DateComp date={props.date} />
+      <Content title={props.title} time={props.time} />
     </div>
   );
 };
