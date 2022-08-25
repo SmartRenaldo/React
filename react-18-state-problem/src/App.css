@@ -1,8 +1,14 @@
 .app {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.box {
   padding-top: 2rem;
   width: 25rem;
   height: 23rem;
-  margin: 50px auto;
+  margin-top: 100px;
   background-color: rgb(47, 128, 208);
   font-size: 2rem;
   text-align: center;
