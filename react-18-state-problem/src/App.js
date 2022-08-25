@@ -2,43 +2,35 @@ import './App.css';
 import { useState } from 'react';
 
 const App = () => {
-  const [value, setValue] = useState(1);
-  const [errAddDisplay, setErrAddDisplay] = useState(false);
-  const [errSubDisplay, setErrSubDisplay] = useState(false);
+  const users = [
+    { id: 0, name: 'Scott', age: 24, description: 'awesome' },
+    { id: 1, name: 'Anna', age: 24, description: 'awesome' },
+    { id: 2, name: 'Joe', age: 24, description: 'awesome' },
+  ];
 
-  const addHandler = () => {
-    if (value < 10) {
-      if (value == 0) {
-        setErrSubDisplay(false);
-      }
+  const randomInt = Math.floor(Math.random() * users.length);
+  const [user, setUser] = useState(users[randomInt]);
 
-      setValue(value + 1);
-      return;
+  const changeUser = () => {
+    if (user.id === 0) {
+      setUser({ ...user, id: users[1].id, name: users[1].name });
+    } else if (user.id === 1) {
+      setUser({ ...user, id: users[2].id, name: users[2].name });
+    } else if (user.id === 2) {
+      setUser({ ...user, id: users[0].id, name: users[0].name });
     }
-
-    setErrAddDisplay(true);
-  };
-
-  const subHandler = () => {
-    if (value > 0) {
-      if (value == 10) {
-        setErrAddDisplay(false);
-      }
-
-      setValue(value - 1);
-      return;
-    }
-
-    setErrSubDisplay(true);
   };
 
   return (
     <div className='app'>
-      <h1>{value}</h1>
-      <button onClick={subHandler}>-</button>
-      <button onClick={addHandler}>+</button>
-      {errSubDisplay && <h3>The value should be greater than -1!</h3>}
-      {errAddDisplay && <h3>The value should be less than 11!</h3>}
+      <div className='my-5'>
+        <h2>name: {user.name}</h2>
+        <h2>age: {user.age}</h2>
+        <h2>description: {user.description}</h2>
+      </div>
+      <button type='button' onClick={changeUser} className='btn btn-dark'>
+        Change User
+      </button>
     </div>
   );
 };
