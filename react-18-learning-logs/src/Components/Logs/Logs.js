@@ -1,5 +1,6 @@
 import LogItem from './LogItem/LogItem';
 import './Logs.css';
+import Card from '../UI/Card/Card';
 
 const Logs = () => {
   const logsData = [
@@ -39,7 +40,7 @@ const Logs = () => {
     // <LogItem key={item.id} {...item} />
   ));
 
-  return <div className='logs'>{logItemDate}</div>;
+  return <Card className='logs'>{logItemDate}</Card>;
 };
 
 export default Logs;
