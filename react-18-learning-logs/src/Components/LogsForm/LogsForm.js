@@ -5,34 +5,58 @@ import './LogsForm.css';
 const LogsForm = () => {
   //save data in the form
 
-  const [inputDate, setInputDate] = useState('');
-  const [inputDesc, setInputDesc] = useState('');
-  const [inputTime, setInputTime] = useState('');
+  // const [inputDate, setInputDate] = useState('');
+  // const [inputDesc, setInputDesc] = useState('');
+  // const [inputTime, setInputTime] = useState('');
+
+  const [formData, setFormData] = useState({
+    inputDate: '',
+    inputDesc: '',
+    inputTime: '',
+  });
 
   const dateChangeHandler = (e) => {
-    setInputDate(e.target.value);
+    // setInputDate(e.target.value);
+    setFormData({
+      ...formData,
+      inputDate: e.target.value,
+    });
   };
 
   const descChangeHandler = (e) => {
-    setInputDesc(e.target.value);
+    // setInputDesc(e.target.value);
+    setFormData({
+      ...formData,
+      inputDesc: e.target.value,
+    });
   };
 
   const timeChangeHandler = (e) => {
-    setInputTime(e.target.value);
+    // setInputTime(e.target.value);
+    setFormData({
+      ...formData,
+      inputTime: e.target.value,
+    });
   };
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
 
     const newLog = {
-      date: new Date(inputDate),
-      desc: inputDesc,
-      time: +inputTime,
+      date: new Date(formData.inputDate),
+      desc: formData.inputDesc,
+      time: +formData.inputTime,
     };
 
-    setInputDate('');
-    setInputDesc('');
-    setInputTime('');
+    // setInputDate('');
+    // setInputDesc('');
+    // setInputTime('');
+
+    setFormData({
+      inputDate: '',
+      inputDesc: '',
+      inputTime: '',
+    });
 
     console.log(newLog);
   };
@@ -44,7 +68,7 @@ const LogsForm = () => {
           <label htmlFor='date'>Date</label>
           <input
             onChange={dateChangeHandler}
-            value={inputDate}
+            value={formData.inputDate}
             id='date'
             type='date'
           />
@@ -53,7 +77,7 @@ const LogsForm = () => {
           <label htmlFor='desc'>Content</label>
           <input
             onChange={descChangeHandler}
-            value={inputDesc}
+            value={formData.inputDesc}
             id='desc'
             type='text'
           />
@@ -62,7 +86,7 @@ const LogsForm = () => {
           <label htmlFor='time'>Time</label>
           <input
             onChange={timeChangeHandler}
-            value={inputTime}
+            value={formData.inputTime}
             id='time'
             type='number'
           />
