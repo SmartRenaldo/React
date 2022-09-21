@@ -19,6 +19,7 @@
 
 .form-item input {
   flex: auto;
+  color: black;
 }
 
 .form-btn {
