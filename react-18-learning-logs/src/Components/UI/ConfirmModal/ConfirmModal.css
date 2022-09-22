@@ -1,0 +1,48 @@
+.confirmModalContainer {
+  display: flex;
+  flex-flow: column;
+  width: 700px;
+  height: 280px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.confirmMsg {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmMsg p {
+  color: rgb(147, 28, 160);
+  font-size: 24px;
+}
+
+.confirmButton {
+  flex: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.confirmButton button {
+  width: 80px;
+  height: 40px;
+  margin-right: 60px;
+  border-style: none;
+  font-size: 20px;
+}
+
+.confirmButton .ok {
+  background-color: rgb(100, 13, 100);
+}
+
+.confirmButton .cancel {
+  background-color: gray;
+  color: black;
+}
