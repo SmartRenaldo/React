@@ -2,3 +2,7 @@
   background-color: rgb(190, 144, 186);
   padding: 1rem;
 }
+
+.noData {
+  text-align: center;
+}

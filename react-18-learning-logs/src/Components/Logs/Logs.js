@@ -13,7 +13,15 @@ const Logs = (props) => {
     />
   ));
 
-  return <Card className='logs'>{logItemDate}</Card>;
+  return (
+    <Card className='logs'>
+      {logItemDate.length ? (
+        logItemDate
+      ) : (
+        <p className='noData'>No data found!</p>
+      )}
+    </Card>
+  );
 };
 
 export default Logs;
