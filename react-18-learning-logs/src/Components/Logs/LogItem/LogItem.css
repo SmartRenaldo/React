@@ -3,3 +3,19 @@
   background-color: rgb(147, 28, 160);
   margin: 0.8rem 0;
 }
+
+.delete {
+  font-weight: bolder;
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 50px;
+  width: 50px;
+  text-align: right;
+}
+
+.delete:hover {
+  color: rgb(190, 144, 186);
+  transform: rotate(1turn);
+}

@@ -36,10 +36,19 @@ const App = () => {
     setLogsData([...logsData, log]);
   };
 
+  const deleteLogItemByIndex = (index) => {
+    setLogsData((prevState) => {
+      const newLogs = [...prevState];
+      newLogs.splice(index, 1);
+
+      return newLogs;
+    });
+  };
+
   return (
     <div className='container app'>
       <LogsForm onSaveLog={saveLogHandler} />
-      <Logs logsData={logsData} />
+      <Logs logsData={logsData} onDelLog={deleteLogItemByIndex} />
     </div>
   );
 };

@@ -35,8 +35,6 @@ const LogsForm = (props) => {
     setInputDate('');
     setInputTitle('');
     setInputTime('');
-
-    console.log(newLog);
   };
 
   return (
