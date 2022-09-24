@@ -11,10 +11,6 @@ const LogItem = (props) => {
 
   const deleteItemHandler = () => {
     setShowDeleteConfirmationWindow(true);
-
-    if (isDeleting) {
-      props.onDelLog(props.logIndex);
-    }
   };
 
   const cancelHandler = () => {
@@ -23,6 +19,7 @@ const LogItem = (props) => {
 
   const okHandler = () => {
     props.onDelLog();
+    setShowDeleteConfirmationWindow(false);
   };
 
   return (

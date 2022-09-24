@@ -1,6 +1,6 @@
 import React from 'react';
 import './Backdrop.css';
-import { ReactDOM } from 'react';
+import ReactDOM from 'react-dom';
 
 const backdropRoot = document.getElementById('backdropRoot');
 

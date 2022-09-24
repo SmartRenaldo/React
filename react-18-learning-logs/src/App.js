@@ -45,10 +45,16 @@ const App = () => {
     });
   };
 
+  const deleteLogItemById = (id) => {
+    setLogsData((prevState) => {
+      return prevState.filter((item) => item.id !== id);
+    });
+  };
+
   return (
     <div className='container app'>
       <LogsForm onSaveLog={saveLogHandler} />
-      <Logs logsData={logsData} onDelLog={deleteLogItemByIndex} />
+      <Logs logsData={logsData} onDelLog={deleteLogItemById} />
     </div>
   );
 };
