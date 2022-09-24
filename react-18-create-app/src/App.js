@@ -1,25 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
-import './App.css';
+import A from './A';
+import classes from './App.module.css';
 
 const App = () => {
-  const [isBlueBorder, setIsBlueBorder] = useState(true);
-
-  const pStyle = {
-    color: 'red',
-    backgroundColor: 'black',
-    border: isBlueBorder && 'blue solid 2px',
-  };
+  const [showBorder, setShowBorder] = useState(false);
 
   const clickHandler = () => {
-    setIsBlueBorder(!isBlueBorder);
+    setShowBorder(!showBorder);
   };
 
   return (
     <div>
-      <p className={`p1 ${isBlueBorder ? '' : 'redBorder'}`} style={pStyle}>
+      <p className={`${classes.p1} ${showBorder ? classes.Border : ''}`}>
         biubiubiu~
       </p>
+      <A />
       <button onClick={clickHandler}>Click</button>
     </div>
   );
