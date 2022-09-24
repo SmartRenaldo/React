@@ -1,0 +1,9 @@
+.p1 {
+  color: red;
+  background-color: black;
+  border: blue solid 2px;
+}
+
+.redBorder {
+  border: 1px red solid;
+}
